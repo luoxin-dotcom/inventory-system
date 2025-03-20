@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>耗材管理系统</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>元器件库存</h1>
+    <table id="inventoryTable">
+        <tr>
+            <th>型号</th>
+            <th>库存</th>
+            <th>位置</th>
+        </tr>
+    </table>
+
+    <h2>借用申请</h2>
+    <form id="borrowForm">
+        <input type="text" id="userName" placeholder="姓名" required>
+        <input type="email" id="userEmail" placeholder="邮箱" required>
+        <select id="componentSelect"></select>
+        <input type="number" id="quantity" min="1" placeholder="数量" required>
+        <input type="date" id="dueDate" required>
+        <input type="text" id="purpose" placeholder="用途" required> <!-- 新增用途输入框 -->
+        <button type="submit">提交申请</button>
+    </form>
+
+    <h2>借用记录</h2>
+    <table id="borrowRecordsTable">
+        <tr>
+            <th>型号</th>
+            <th>借用人</th>
+            <th>数量</th>
+            <th>借用日期</th>
+            <th>到期日</th>
+            <th>剩余天数</th>
+            <th>状态</th>
+        </tr>
+    </table>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
